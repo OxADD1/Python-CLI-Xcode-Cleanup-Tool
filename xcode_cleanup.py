@@ -127,16 +127,16 @@ CATEGORIES = [
     }
 ]
 
-# Custom style for questionary
+# Custom style for questionary - neutral green theme
 custom_style = Style([
-    ('qmark', 'fg:#673ab7 bold'),
+    ('qmark', 'fg:#00aa00 bold'),
     ('question', 'bold'),
-    ('answer', 'fg:#2196f3 bold'),
-    ('pointer', 'fg:#673ab7 bold'),
-    ('highlighted', 'fg:#673ab7 bold'),
-    ('selected', 'fg:#2196f3'),
-    ('separator', 'fg:#cc5454'),
-    ('instruction', ''),
+    ('answer', 'fg:#00aa00 bold'),
+    ('pointer', 'fg:#00aa00 bold'),
+    ('highlighted', 'fg:#00aa00'),
+    ('selected', 'fg:#00aa00'),
+    ('separator', 'fg:#666666'),
+    ('instruction', 'fg:#888888'),
     ('text', ''),
 ])
 
@@ -258,7 +258,7 @@ def select_categories() -> List[Dict]:
     ]
     
     console.print("[bold]Select items to clean:[/bold]")
-    console.print("[dim]Use ↑↓ arrows to navigate, Space to toggle, Enter to confirm[/dim]")
+    console.print("[dim]Use ↑↓ to navigate, Space to toggle, [green]'a' to select all[/green], Enter to confirm[/dim]")
     console.print()
     
     selected = questionary.checkbox(
