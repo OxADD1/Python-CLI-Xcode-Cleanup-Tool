@@ -187,15 +187,14 @@ def show_header():
     console.clear()
     
     header = Panel.fit(
-        "[bold cyan]🧹 Xcode Cleanup Tool[/bold cyan]\n"
-        "[dim]Free up disk space by removing Xcode cache files[/dim]",
-        border_style="cyan"
+        "[bold]🧹 Xcode Cleanup Tool[/bold]\n"
+        "Free up disk space by removing Xcode cache files"
     )
     console.print(header)
     console.print()
     
     available = get_available_space()
-    console.print(f"[bold]Available Disk Space:[/bold] [green]{available}[/green]")
+    console.print(f"[bold]Available Disk Space:[/bold] {available}")
     console.print()
 
 
@@ -218,10 +217,10 @@ def show_category_details():
     """Show detailed information about all categories."""
     table = Table(title="Cleanup Categories", box=box.ROUNDED)
     
-    table.add_column("Category", style="cyan", no_wrap=True)
-    table.add_column("Description", style="white")
-    table.add_column("Size", style="yellow")
-    table.add_column("Safety", style="green")
+    table.add_column("Category", no_wrap=True)
+    table.add_column("Description")
+    table.add_column("Size")
+    table.add_column("Safety")
     
     for category in CATEGORIES:
         safety_display = {
@@ -258,7 +257,7 @@ def select_categories() -> List[Dict]:
     ]
     
     console.print("[bold]Select items to clean:[/bold]")
-    console.print("[dim]Use ↑↓ to navigate, Space to toggle, [green]'a' to select all[/green], Enter to confirm[/dim]")
+    console.print("Use ↑↓ to navigate, Space to toggle, 'a' to select all, Enter to confirm")
     console.print()
     
     selected = questionary.checkbox(
@@ -324,10 +323,10 @@ def perform_cleanup(categories: List[Dict]) -> List[Dict]:
         console=console
     ) as progress:
         
-        task = progress.add_task("[cyan]Cleaning...", total=len(categories))
+        task = progress.add_task("Cleaning...", total=len(categories))
         
         for category in categories:
-            progress.update(task, description=f"[cyan]Cleaning: {category['name']}")
+            progress.update(task, description=f"Cleaning: {category['name']}")
             
             if category['type'] == 'directory':
                 success, message, size = clean_directory(category['path'])
@@ -354,21 +353,20 @@ def perform_cleanup(categories: List[Dict]) -> List[Dict]:
 def show_results(results: List[Dict]):
     """Display cleanup results."""
     console.print()
-    console.print("[bold green]✨ Cleanup Completed![/bold green]")
+    console.print("[bold]✨ Cleanup Completed![/bold]")
     console.print()
     
     table = Table(title="Results", box=box.ROUNDED)
-    table.add_column("Category", style="cyan")
-    table.add_column("Status", style="white")
-    table.add_column("Size Freed", style="yellow")
+    table.add_column("Category")
+    table.add_column("Status")
+    table.add_column("Size Freed")
     
     for result in results:
         status_icon = "✓" if result['success'] else "✗"
-        status_color = "green" if result['success'] else "red"
         
         table.add_row(
             result['name'],
-            f"[{status_color}]{status_icon}[/{status_color}] {result['message']}",
+            f"{status_icon} {result['message']}",
             result['size']
         )
     
@@ -376,7 +374,7 @@ def show_results(results: List[Dict]):
     console.print()
     
     new_space = get_available_space()
-    console.print(f"[bold]New Available Space:[/bold] [green]{new_space}[/green]")
+    console.print(f"[bold]New Available Space:[/bold] {new_space}")
     console.print()
 
 
@@ -405,7 +403,7 @@ def main():
             return
         
         console.print()
-        console.print(f"[bold]Selected {len(selected_categories)} categories for cleanup[/bold]")
+        console.print(f"Selected {len(selected_categories)} categories for cleanup")
         console.print()
         
         # Confirmation
@@ -436,27 +434,27 @@ def main():
         ).ask()
         
         if empty_trash:
-            console.print("[dim]Emptying trash...[/dim]")
+            console.print("Emptying trash...")
             try:
                 subprocess.run(
                     ['osascript', '-e', 'tell application "Finder" to empty trash'],
                     capture_output=True,
                     timeout=30
                 )
-                console.print("[green]✓ Trash emptied[/green]")
+                console.print("✓ Trash emptied")
             except Exception:
-                console.print("[red]✗ Failed to empty trash[/red]")
+                console.print("✗ Failed to empty trash")
         
         console.print()
-        console.print("[bold cyan]🎉 All done![/bold cyan]")
+        console.print("[bold]🎉 All done![/bold]")
         
     except KeyboardInterrupt:
         console.print()
-        console.print("[yellow]Cleanup cancelled by user.[/yellow]")
+        console.print("Cleanup cancelled by user.")
         sys.exit(0)
     except Exception as e:
         console.print()
-        console.print(f"[bold red]Error: {str(e)}[/bold red]")
+        console.print(f"[bold]Error: {str(e)}[/bold]")
         sys.exit(1)
 
 
