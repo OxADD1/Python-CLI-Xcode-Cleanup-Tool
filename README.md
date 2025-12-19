@@ -23,31 +23,6 @@ Remove gigabytes of Xcode cache files safely and easily with an interactive term
 
 ---
 
-## 📸 Screenshot
-
-```
-╔════════════════════════════════════════════╗
-║   🧹 Xcode Cleanup Tool                   ║
-║   Free up disk space by removing files    ║
-╚════════════════════════════════════════════╝
-
-Available Disk Space: 245 GB
-
-Select items to clean:
-Use ↑↓ arrows to navigate, Space to toggle, Enter to confirm
-
-☑ 🟢 Derived Data (typically 5-50GB)
-☑ 🟢 Unavailable Simulators (typically Varies)
-☑ 🟢 Device Support Files (typically 1-10GB)
-☑ 🟢 Simulator Caches (typically 1-5GB)
-☐ 🟡 Archives (typically 1-20GB)
-☑ 🟢 Device Logs (typically 100MB-1GB)
-☑ 🟢 Swift Package Manager Cache (typically 1-5GB)
-☑ 🟢 Xcode Previews (typically 500MB-2GB)
-☐ 🟠 System Caches (typically 1-3GB)
-```
-
----
 
 ## 🚀 Quick Start
 
