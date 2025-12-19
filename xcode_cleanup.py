@@ -23,16 +23,20 @@ except ImportError:
     print("❌ Missing required packages. Installing...")
     print("Note: Installing with --user flag for compatibility with Homebrew Python")
     try:
-        subprocess.check_call([sys.executable, "-m", "pip", "install", "--user", "rich", "questionary"])
+        # Use --break-system-packages for Python 3.13+ compatibility
+        # Safe when combined with --user (installs to user directory only)
+        subprocess.check_call([
+            sys.executable, "-m", "pip", "install", 
+            "--user", "--break-system-packages", 
+            "rich", "questionary"
+        ])
         print("✅ Packages installed successfully!")
         print("Please run the script again: ./xcode_cleanup.py")
         sys.exit(0)
     except subprocess.CalledProcessError:
         print("\n❌ Auto-installation failed. Please install manually:")
-        print("\nOption 1 (Recommended):")
-        print("  pip3 install --user rich questionary")
-        print("\nOption 2: Using requirements.txt")
-        print("  pip3 install --user -r requirements.txt")
+        print("\nRecommended command:")
+        print("  pip3 install --user --break-system-packages rich questionary")
         print("\nThen run the script again: ./xcode_cleanup.py")
         sys.exit(1)
 
