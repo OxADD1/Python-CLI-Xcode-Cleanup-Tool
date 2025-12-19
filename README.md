@@ -167,9 +167,18 @@ Should show Python 3.7 or later. If not installed:
 
 **2. Download the Tool**
 
+Clone the repository:
 ```bash
 git clone https://github.com/OxADD1/Python-CLI-Xcode-Cleanup-Tool.git
+```
+
+Navigate to directory:
+```bash
 cd Python-CLI-Xcode-Cleanup-Tool
+```
+
+Make executable:
+```bash
 chmod +x xcode_cleanup.py
 ```
 
