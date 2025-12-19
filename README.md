@@ -59,27 +59,14 @@ Use ↑↓ arrows to navigate, Space to toggle, Enter to confirm
 
 ### Installation
 
-**Option 1: Download and Run** (Fastest)
-
-```bash
-# Download the script
-curl -O https://raw.githubusercontent.com/OxADD1/xcode-cleanup-tool/main/xcode_cleanup.py
-
-# Make it executable
-chmod +x xcode_cleanup.py
-
-# Run it
-./xcode_cleanup.py
-```
-
-**Option 2: Clone Repository**
+**Option 1: Clone Repository** (Recommended)
 
 ```bash
 # Clone the repository
-git clone https://github.com/OxADD1/xcode-cleanup-tool.git
+git clone https://github.com/OxADD1/Python-CLI-Xcode-Cleanup-Tool.git
 
 # Navigate to directory
-cd xcode-cleanup-tool
+cd Python-CLI-Xcode-Cleanup-Tool
 
 # Make executable
 chmod +x xcode_cleanup.py
@@ -88,10 +75,23 @@ chmod +x xcode_cleanup.py
 ./xcode_cleanup.py
 ```
 
+**Option 2: Direct Download**
+
+```bash
+# Download the script
+curl -O https://raw.githubusercontent.com/OxADD1/Python-CLI-Xcode-Cleanup-Tool/main/xcode_cleanup.py
+
+# Make it executable
+chmod +x xcode_cleanup.py
+
+# Run it
+./xcode_cleanup.py
+```
+
 **Option 3: Direct Python Execution**
 
 ```bash
-# No need to make executable
+# If you prefer running with python3 directly
 python3 xcode_cleanup.py
 ```
 
@@ -200,17 +200,17 @@ Should show Python 3.7 or later. If not installed:
 
 Choose one method:
 
-**Method A: Direct Download**
+**Method A: Git Clone** (Recommended)
 ```bash
-cd ~/Downloads
-curl -O https://raw.githubusercontent.com/OxADD1/xcode-cleanup-tool/main/xcode_cleanup.py
+git clone https://github.com/OxADD1/Python-CLI-Xcode-Cleanup-Tool.git
+cd Python-CLI-Xcode-Cleanup-Tool
 chmod +x xcode_cleanup.py
 ```
 
-**Method B: Git Clone**
+**Method B: Direct Download**
 ```bash
-git clone https://github.com/OxADD1/xcode-cleanup-tool.git
-cd xcode-cleanup-tool
+cd ~/Downloads
+curl -O https://raw.githubusercontent.com/OxADD1/Python-CLI-Xcode-Cleanup-Tool/main/xcode_cleanup.py
 chmod +x xcode_cleanup.py
 ```
 
@@ -367,8 +367,8 @@ A: Just Python 3.7+. The tool auto-installs its dependencies.
 
 ## 📞 Support
 
-- **Issues:** [GitHub Issues](https://github.com/OxADD1/xcode-cleanup-tool/issues)
-- **Discussions:** [GitHub Discussions](https://github.com/OxADD1/xcode-cleanup-tool/discussions)
+- **Issues:** [GitHub Issues](https://github.com/OxADD1/Python-CLI-Xcode-Cleanup-Tool/issues)
+- **Discussions:** [GitHub Discussions](https://github.com/OxADD1/Python-CLI-Xcode-Cleanup-Tool/discussions)
 
 ---
 
