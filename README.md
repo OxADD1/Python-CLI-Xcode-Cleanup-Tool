@@ -34,17 +34,27 @@ Remove gigabytes of Xcode cache files safely and easily with an interactive term
 
 ### Installation
 
+**1. Clone the repository:**
+
 ```bash
-# Clone the repository
 git clone https://github.com/OxADD1/Python-CLI-Xcode-Cleanup-Tool.git
+```
 
-# Navigate to directory
+**2. Navigate to directory:**
+
+```bash
 cd Python-CLI-Xcode-Cleanup-Tool
+```
 
-# Make executable
+**3. Make executable:**
+
+```bash
 chmod +x xcode_cleanup.py
+```
 
-# Run
+**4. Run the tool:**
+
+```bash
 ./xcode_cleanup.py
 ```
 
