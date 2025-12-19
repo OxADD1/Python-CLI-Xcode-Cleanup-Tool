@@ -63,7 +63,7 @@ Use ↑↓ arrows to navigate, Space to toggle, Enter to confirm
 
 ```bash
 # Download the script
-curl -O https://raw.githubusercontent.com/YOUR_USERNAME/xcode-cleanup-tool/main/xcode_cleanup.py
+curl -O https://raw.githubusercontent.com/OxADD1/xcode-cleanup-tool/main/xcode_cleanup.py
 
 # Make it executable
 chmod +x xcode_cleanup.py
@@ -76,7 +76,7 @@ chmod +x xcode_cleanup.py
 
 ```bash
 # Clone the repository
-git clone https://github.com/YOUR_USERNAME/xcode-cleanup-tool.git
+git clone https://github.com/OxADD1/xcode-cleanup-tool.git
 
 # Navigate to directory
 cd xcode-cleanup-tool
@@ -203,13 +203,13 @@ Choose one method:
 **Method A: Direct Download**
 ```bash
 cd ~/Downloads
-curl -O https://raw.githubusercontent.com/YOUR_USERNAME/xcode-cleanup-tool/main/xcode_cleanup.py
+curl -O https://raw.githubusercontent.com/OxADD1/xcode-cleanup-tool/main/xcode_cleanup.py
 chmod +x xcode_cleanup.py
 ```
 
 **Method B: Git Clone**
 ```bash
-git clone https://github.com/YOUR_USERNAME/xcode-cleanup-tool.git
+git clone https://github.com/OxADD1/xcode-cleanup-tool.git
 cd xcode-cleanup-tool
 chmod +x xcode_cleanup.py
 ```
@@ -367,8 +367,8 @@ A: Just Python 3.7+. The tool auto-installs its dependencies.
 
 ## 📞 Support
 
-- **Issues:** [GitHub Issues](https://github.com/YOUR_USERNAME/xcode-cleanup-tool/issues)
-- **Discussions:** [GitHub Discussions](https://github.com/YOUR_USERNAME/xcode-cleanup-tool/discussions)
+- **Issues:** [GitHub Issues](https://github.com/OxADD1/xcode-cleanup-tool/issues)
+- **Discussions:** [GitHub Discussions](https://github.com/OxADD1/xcode-cleanup-tool/discussions)
 
 ---
 
