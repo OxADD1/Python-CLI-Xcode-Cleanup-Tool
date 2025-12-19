@@ -98,14 +98,21 @@ Simply run the script and follow the interactive prompts:
 ./xcode_cleanup.py
 ```
 
+**Keyboard Shortcuts for Selection:**
+- **↑/↓** - Navigate through items
+- **Space** - Toggle individual item on/off
+- **a** - Select/deselect all items at once
+- **i** - Invert selection
+- **Enter** - Confirm selection
+
 ### Step-by-Step Flow
 
 1. **View Details** (Optional)
    - Choose whether to see detailed information about all categories
 
 2. **Select Categories**
-   - Use **↑/↓** arrow keys to navigate
-   - Press **Space** to toggle selection
+   - Use keyboard shortcuts above to select items
+   - **Space** for individual selection, **a** for all, **i** to invert
    - Press **Enter** to confirm
 
 3. **Confirm Cleanup**
