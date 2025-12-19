@@ -21,14 +21,20 @@ try:
     from questionary import Style
 except ImportError:
     print("❌ Missing required packages. Installing...")
-    subprocess.check_call([sys.executable, "-m", "pip", "install", "rich", "questionary"])
-    from rich.console import Console
-    from rich.progress import Progress, SpinnerColumn, TextColumn, BarColumn
-    from rich.panel import Panel
-    from rich.table import Table
-    from rich import box
-    import questionary
-    from questionary import Style
+    print("Note: Installing with --user flag for compatibility with Homebrew Python")
+    try:
+        subprocess.check_call([sys.executable, "-m", "pip", "install", "--user", "rich", "questionary"])
+        print("✅ Packages installed successfully!")
+        print("Please run the script again: ./xcode_cleanup.py")
+        sys.exit(0)
+    except subprocess.CalledProcessError:
+        print("\n❌ Auto-installation failed. Please install manually:")
+        print("\nOption 1 (Recommended):")
+        print("  pip3 install --user rich questionary")
+        print("\nOption 2: Using requirements.txt")
+        print("  pip3 install --user -r requirements.txt")
+        print("\nThen run the script again: ./xcode_cleanup.py")
+        sys.exit(1)
 
 console = Console()
 

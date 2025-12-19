@@ -188,15 +188,20 @@ chmod +x xcode_cleanup.py
 ./xcode_cleanup.py
 ```
 
-**4. Dependencies (Auto-installed)**
+**4. Install Dependencies**
 
-The tool automatically installs required packages:
-- `rich` - Terminal formatting
-- `questionary` - Interactive prompts
+The tool automatically installs required packages on first run.
 
-If auto-installation fails, install manually:
+**If auto-installation fails** (Homebrew Python users):
+
 ```bash
-pip3 install -r requirements.txt
+pip3 install --user rich questionary
+```
+
+Then run the tool again:
+
+```bash
+./xcode_cleanup.py
 ```
 
 ---
